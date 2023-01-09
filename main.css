@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Comforter+Brush&family=Fasthand&family=Libre+Baskerville&family=Noto+Serif+Khojki:wght@700&family=Playfair+Display+SC&family=Poppins:ital,wght@0,200;1,100&family=Public+Sans:wght@300&family=Raleway:wght@100&family=Roboto&family=Satisfy&family=Shadows+Into+Light&family=Source+Code+Pro:wght@800&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#0a3d62;
+    margin: 0;
+}
+header{
+    background-color:#3c6382 ;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.search{
+    background-color:#0E1C2D;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid #142766;
+    padding: 5px 10px;
+}
+.search::placeholder{
+    color: white;
+}
+.search:hover{
+    border: 1px solid white;
+    background-color: #3c6382;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.movie{
+    /*border: 1px solid red;*/
+    background-color:#3c6382 ;
+    border-radius: 5px;
+    box-shadow:0 10px 10px rgba(0,0,0,0.5);
+    width:300px;
+    max-height: 100%;
+    overflow: auto;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.movie>img{
+    border-radius: 5px;
+    width: 100%;
+
+
+}
+.movie-info{
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    letter-spacing: 1px;
+    padding: 13px ;
+}
+.movie-info>.movie-title{
+    /*border: 1px solid red;*/
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    padding: 6px;
+}
+.movie-info>span{
+    /*border: 1px solid red;*/
+    border-radius: 3px;
+    padding: 6px;
+    background-color:#0a3d62;
+    color: yellow;
+    font-weight: bold;
+}
+.movie-info>span.green{
+    color: greenyellow;
+}
+.movie-info>span.orange{
+    color: white;
+}
+.movie-info>span.red{
+    color:red;
+}
+.overview{
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
